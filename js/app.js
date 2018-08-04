@@ -1,5 +1,10 @@
 document.body.onload = startTimer();
-document.body.onload = (()=>alert("Timer Started!"));
+let playerName = prompt("Input player name");
+let times = prompt("Set Timer \n How many minutes do you wish to play? \n For unlimted timer, clear input", "1");
+var timerValue = parseInt(times, 10);
+document.body.onload = playerName;
+document.body.onload = times;
+
 // Enemies our player must avoid
 var Enemy = function(row, speed) {
     // Variables applied to each of our instances go here,
@@ -120,7 +125,6 @@ document.addEventListener('keyup', function(e) {
 var second = 0, minute = 0; hour = 0;
 var timer = document.querySelector(".timer");
 var interval;
-
 function startTimer(){
         interval = setInterval(function(){
         timer.innerHTML = `${minute} mins ${second} secs`;
@@ -133,5 +137,13 @@ function startTimer(){
             hour++;
             minute = 0;
         }
+        if (minute == timerValue){
+            alert(`Time Elapsed! \n Your Score is ${player.score}. \n Congratulations!!!`);
+            document.location.reload(true);  
+        }
     },1000);
 }
+
+//Displaying Player name on the page
+let playingName = document.querySelector("#name");
+playingName.innerHTML = "Warrior " + playerName;
