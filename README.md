@@ -17,6 +17,9 @@ Users will be asked to input player name and input the duration of time they wis
 
 ## How to Play
 
+To play this game, you can clone this repository and open the 'index.html' file in your browser or you can just click the link to github
+pages on (https://shinnokmp.github.io/arcadegame/)
+
 The game requires just the four (4) direction keys, that is, *up, down, left, right*.
 Player is expected to move across the enemy field without colliding with any of the bugs to the water field. On crossing, player gains a point and is reset to start position.
 If collision occurs, player is reset to start position and 1 point is deleted from player.
