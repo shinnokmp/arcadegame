@@ -94,13 +94,13 @@ for (var i = 0; i < 7; i++) {
     var random_speed = getRandomNumber(10, 31) * 10;
     var random_row = getRandomNumber(1, 4);
     allEnemies[i] = new Enemy(random_row, random_speed);
-};
+}
 
 var player = new Player();
 
 function getRandomNumber(min, max) {
     return Math.floor(Math.random() * (max - min)) + min;
-};
+}
 
 // This listens for key presses and sends the keys to your
 // Player.handleInput() method. You don't need to modify this.
@@ -142,7 +142,7 @@ function startTimer(){
             document.location.reload(true);  
         }
     },1000);
-};
+}
 
 //Displaying Player name on the page
 let playingName = document.querySelector("#name");
