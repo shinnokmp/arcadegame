@@ -147,3 +147,12 @@ function startTimer(){
 //Displaying Player name on the page
 let playingName = document.querySelector("#name");
 playingName.innerHTML = "Warrior " + playerName;
+
+//integrating button for android users
+var mc = new Hammer.Manager(myElement, myOptions);
+
+mc.add( new Hammer.Pan({ direction: Hammer.DIRECTION_ALL, threshold: 0 }) );
+mc.add( new Hammer.Tap({ event: 'quadrupletap', taps: 4 }) );
+
+mc.on("pan", handlePan);
+mc.on("quadrupletap", handleTaps);
